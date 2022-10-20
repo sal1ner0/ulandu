@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- Banner Section -->
     <section id="Banner" class="align-items-center">
       <div class="bannerimg"><img src="~static/images/bannerbg.png"/></div>
@@ -65,7 +64,6 @@
     <!-- Counter Section -->
     <Statistics/>
     <!-- End Counter Section -->
-
 
     <!-- Technology -->
     <section id="technology">
@@ -252,7 +250,6 @@
     </section>
     <!-- End Technology -->
 
-
     <!-- worldwide -->
     <TrustedMap/>
     <!-- end worldwide -->
@@ -362,7 +359,6 @@
     <Testimonial/>
     <!-- End Our Testimonial Section -->
 
-
     <!-- Our Work Section -->
     <section id="client" class="align-items-center ">
       <div class="container">
@@ -382,7 +378,6 @@
       </div>
     </section>
     <!-- // Our Work Section -->
-
   </div>
 </template>
 

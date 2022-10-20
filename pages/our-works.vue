@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- Tab  Section -->
     <section id="works" class="align-items-center ">
       <img class="worksleft-img" src="~static/images/worksleft-img.png">
@@ -47,7 +46,6 @@
     </section>
     <!--End Tab  Section -->
 
-
     <!-- dedicated -->
     <section id="dedicated" class="align-items-center ">
       <div class="container">
@@ -75,7 +73,6 @@
     <!-- // Our Testimonial Section -->
 
   </div>
-
 </template>
 
 <script>
