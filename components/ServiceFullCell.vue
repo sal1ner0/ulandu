@@ -1,19 +1,22 @@
 <template>
-  <div class="border">
-    <div v-if="imagePositionFirst">
-      Image
-    </div>
-    <div>
-      <div><b>{{ title }}</b></div>
-      <div>{{ description }}</div>
-      <div>
-        <NuxtLink to="/">Learn more</NuxtLink>
+  <section id="mobile" class="align-items-center"
+           v-bind:class="{'first-mobile': imagePositionFirst,  'second-mobile': !imagePositionFirst}">
+    <div class="container">
+      <div class="row align-items-center ">
+        <div v-if="!imagePositionFirst" class="col-sm-6 text-center">
+          <img :src="image" class="client-image">
+        </div>
+        <div class="col-sm-6">
+          <p class="lang-name">{{ title }} </p>
+          <span class="lang-desc">{{ description }}</span>
+          <NuxtLink class="Learnmore-btn" to="/">Learn more</NuxtLink>
+        </div>
+        <div v-if="imagePositionFirst" class="col-sm-6 text-center">
+          <img :src="image" class="client-image">
+        </div>
       </div>
     </div>
-    <div v-if="!imagePositionFirst">
-      Image
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
