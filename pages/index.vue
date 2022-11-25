@@ -38,14 +38,16 @@
             </div>
           </div>
           <div class="slick-slider row mr-0">
-            <template v-for="service in services">
-              <ServiceIndex
-                :description="service.description"
-                :icon="service.icon"
-                :link="service.link"
-                :title="service.title"
-              />
-            </template>
+            <swiper ref="serviceSwiper" :options="servicesSwiperOptions">
+              <swiper-slide v-for="service in services" :key="service.title">
+                <ServiceIndex
+                  :description="service.description"
+                  :icon="service.icon"
+                  :link="service.link"
+                  :title="service.title"
+                />
+              </swiper-slide>
+            </swiper>
           </div>
         </div>
       </div>
@@ -103,9 +105,11 @@
 
               </div>
               <div class="col-sm-12">
-                <p>Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus
-                  tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at
-                  massa non justo, turpis mollis quam.</p>
+                <p>
+                  Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt
+                  nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non
+                  justo, turpis mollis quam.
+                </p>
               </div>
             </div>
           </b-tab>
@@ -139,7 +143,11 @@
 
               </div>
               <div class="col-sm-12">
-                <p>Back end</p>
+                <p>
+                  Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt
+                  nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non
+                  justo, turpis mollis quam.
+                </p>
               </div>
             </div>
           </b-tab>
@@ -173,7 +181,11 @@
 
               </div>
               <div class="col-sm-12">
-                <p>Front end</p>
+                <p>
+                  Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt
+                  nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non
+                  justo, turpis mollis quam.
+                </p>
               </div>
             </div>
           </b-tab>
@@ -207,7 +219,11 @@
 
               </div>
               <div class="col-sm-12">
-                <p>Database</p>
+                <p>
+                  Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt
+                  nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non
+                  justo, turpis mollis quam.
+                </p>
               </div>
             </div>
           </b-tab>
@@ -241,7 +257,11 @@
 
               </div>
               <div class="col-sm-12">
-                <p>Design</p>
+                <p>
+                  Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt
+                  nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non
+                  justo, turpis mollis quam.
+                </p>
               </div>
             </div>
           </b-tab>
@@ -271,77 +291,127 @@
                   <p>E-commerce
                   </p>
                 </template>
-                <template v-for="industrySolution in industrySolutions">
-                  <IndustrySolution
-                    :description="industrySolution.description"
-                    :image="industrySolution.image"
-                    :title="industrySolution.title"
-                  />
-                </template>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Healthcare</p>
                 </template>
-                <div>
-                  <p>Healthcare</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Food delievery</p>
                 </template>
-                <div>
-                  <p>Food delievery</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Real estate</p>
                 </template>
-                <div>
-                  <p>Real estate</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Travel</p>
                 </template>
-                <div>
-                  <p>Travel</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Sport</p>
                 </template>
-                <div>
-                  <p>Sport</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Business</p>
                 </template>
-                <div>
-                  <p>Business</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Education</p>
                 </template>
-                <div>
-                  <p>Education</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
               <b-tab>
                 <template #title>
                   <p>Entertainment</p>
                 </template>
-                <div>
-                  <p>Entertainment</p>
-                </div>
+                <swiper ref="industrySolutions" :options="industrySolutionsSwiperOptions">
+                  <swiper-slide v-for="industrySolution in industrySolutions" :key="industrySolution.title">
+                    <IndustrySolution
+                      :description="industrySolution.description"
+                      :image="industrySolution.image"
+                      :title="industrySolution.title"
+                    />
+                  </swiper-slide>
+                </swiper>
               </b-tab>
             </b-tabs>
           </div>
@@ -389,31 +459,31 @@ export default {
       services: [
         {
           title: "App Development",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           icon: require('~/static/images/phone.svg'),
           link: "/services/mobile-development",
         },
         {
           title: "Web Development",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           icon: require('~/static/images/web.svg'),
           link: "/services/web-development",
         },
         {
           title: "UI/UX Design",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           icon: require('~/static/images/Design.svg'),
           link: "/services/ui-ux-design",
         },
         {
           title: "Quality Assurance",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           icon: require('~/static/images/quality.svg'),
           link: "/services/mobile-development",
         },
         {
           title: "Search engine optimization",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           icon: require('~/static/images/search.svg'),
           link: "/services/mobile-development",
         },
@@ -443,7 +513,13 @@ export default {
           image: "https://dummyimage.com/500x515/3b635a/fff",
           imagePositionFirst: false,
         },
-      ]
+      ],
+      servicesSwiperOptions: {
+        slidesPerView: 3,
+      },
+      industrySolutionsSwiperOptions: {
+        slidesPerView: 1,
+      },
     }
   }
 }
