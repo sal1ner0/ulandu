@@ -5,25 +5,27 @@
       <div class="container">
         <div class="row ">
           <div class="col-lg-3 col-md-3 col-sm-3 ">
-            <img alt="ulandu" class="footerlogo" src="~static/images/logo.svg" title="ulandu"/>
+            <nuxt-img alt="ulandu" class="footerlogo" src="/images/logo.svg" title="ulandu"/>
             <div class="information">
               <div class="d-flex">
-                <img src="~static/images/mailicon.svg"/>
-                <a href="mailto:Sales@ulandu.com">Sales@ulandu.com</a>
+                <nuxt-img src="images/mailicon.svg"/>
+                <a :href="`mailto:${$config.contact.email}`">
+                  {{ $config.contact.email }}
+                </a>
               </div>
               <div class="d-flex">
-                <img src="~static/images/callicon.svg"/>
-                <a href="tel:+34123123123">+34-123-123-123</a>
+                <nuxt-img src="images/callicon.svg"/>
+                <a :href="`tel:${$config.contact.phone_number}`">
+                  {{ $config.contact.phone_number }}
+                </a>
               </div>
             </div>
             <div>
               <p class="followus-text">Follow us</p>
               <div class="d-flex social-links">
-                <a class="text-white" href="#"><img src="~static/images/facebook.png"/></a>
-                <a class="text-white" href="#"><img src="~static/images/twitter.png"/></a>
-                <a class="text-white" href="#"><img src="~static/images/instagram.png"/></a>
-                <a class="text-white" href="#"><img src="~static/images/linkedin.png"/></a>
-                <a class="text-white" href="#"><img src="~static/images/youtube.png"/></a>
+                <a v-for="socialLink in Object.keys($config.social_links)" :key="socialLink" class="text-white" :href="$config.social_links[socialLink]" target="_blank" :title="socialLink">
+                  <nuxt-img :src="`images/${socialLink}.png`"/>
+                </a>
               </div>
             </div>
             <p class="copyright-text">Copyright @ ULANDU. all rights reserved</p>

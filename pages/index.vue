@@ -495,7 +495,7 @@ export default {
           image: "https://dummyimage.com/500X500/3b635a/fff",
         },
         {
-          title: "Bookie - Book your entertainment",
+          title: "Bookie - Book your entertainment now",
           description: "Ullamcorper nisi, sagittis, proin ac et euismod pharetra ornare. Semper feugiat nec a cursus tincidunt nulla in. Consequat hac ut lobortis amet, varius sapien sagittis. Aliquam molestie diam at massa non justo, turpis mollis quam",
           image: "https://dummyimage.com/500X500/3b635a/fff",
         },

@@ -1,3 +1,8 @@
+.error {
+  color: red;
+  font-size: 14px;
+}
+
 .top-header {
   background: #3b635a;
   padding: 10px 0px;
@@ -1500,7 +1505,7 @@ section#contactus {
   border-right: none;
   border-radius: 0px;
   border-bottom: 1px solid #000000;
-  margin-bottom: 25px;
+  /*margin-bottom: 25px;*/
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
