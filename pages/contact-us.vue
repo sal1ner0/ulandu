@@ -108,12 +108,14 @@
               </div>
               <div class="form-row">
                 <p class="contact-service-text col-sm-12">Services</p>
-                <div class="col-sm-5 col-12 col-md-12 col-lg-5" v-for="provided_service in provided_services" :key="provided_service">
-                  <label class="check-container">
-                    {{ provided_service }}
-                    <input type="checkbox" :value="provided_service" v-model.trim="services">
-                    <span class="checkmark"></span>
-                  </label>
+                <div class="row">
+                  <div class="col-sm-5 col-12 col-md-12 col-lg-5" v-for="provided_service in provided_services" :key="provided_service">
+                    <label class="check-container">
+                      {{ provided_service }}
+                      <input type="checkbox" :value="provided_service" v-model.trim="services">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
                 </div>
                 <span v-if="!$v.services.required && $v.services.$dirty" class="error">
                     Please choose any service
